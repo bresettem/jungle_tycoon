@@ -3,12 +3,12 @@
   <div class="row justify-content-center">
     <div class="col col-md-12 text-center">
       <div class="gallery-container" id="animated-thumbnails-gallery">
-        <% 1.upto(20).with_index do |index| %>
-          <a id="<%= index %>" data-lg-size=" 340-240" class="gallery-item"
-             data-src="https://loremflickr.com/320/240?random=<%= index %>"
+        <% @images.each.with_index do |image| %>
+          <a id="<%= image.id %>" data-lg-size=" 340-240" class="gallery-item"
+             data-src="<%= image.url %>"
              data-sub-html="<h4>Photo by - <a href='#'>Text </a></h4>
           <p> Location - <a href=''></a>Text</p>">
-            <img alt="<%= index %>" class="img-responsive" src="https://loremflickr.com/320/240?random=<%= index %>"/>
+            <img alt="<%= image.id %>" class="img-responsive" src="<%= image.url %>"/>
           </a>
         <% end %>
       </div>
