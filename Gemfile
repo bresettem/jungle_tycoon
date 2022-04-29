@@ -75,3 +75,4 @@ group :test do
 end
 
 gem 'figaro'
+gem 'pg_search'

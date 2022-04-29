@@ -6,8 +6,8 @@
         <% @images.each.with_index do |image| %>
           <a id="<%= image.id %>" data-lg-size=" 340-240" class="gallery-item"
              data-src="<%= image.url %>"
-             data-sub-html="<h4>Photo by - <a href='#'>Text </a></h4>
-          <p> Location - <a href=''></a>Text</p>">
+             data-sub-html="<h4>Image- <a href='<%= image.url %>'><%= image.id %>.png </a></h4>
+          <p> IPFS - <a href='<%= image.ipfs %>'><%= image.ipfs %></a></p>">
             <img alt="<%= image.id %>" class="img-responsive" src="<%= image.url %>"/>
           </a>
         <% end %>
