@@ -12,7 +12,6 @@ import "@fortawesome/fontawesome-free/js/solid"
 
 // Custom
 import './custom/mdb.min'
-import './custom/light_gallery'
 
 let popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
 let popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
