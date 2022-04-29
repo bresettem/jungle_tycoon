@@ -1,0 +1,14 @@
+body {
+    padding-top: 70px;
+}
+
+#search {
+    max-width: 40rem;
+}
+
+footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    background-color: #093174;
+}
