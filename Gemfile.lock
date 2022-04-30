@@ -133,6 +133,8 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.4-x86_64-linux)
       racc (~> 1.4)
+    pagy (5.10.1)
+      activesupport
     pg (1.3.5)
     pg_search (2.3.6)
       activerecord (>= 5.2)
@@ -225,6 +227,7 @@ DEPENDENCIES
   figaro
   jbuilder
   jsbundling-rails
+  pagy (~> 5.10)
   pg (~> 1.1)
   pg_search
   puma (~> 5.0)

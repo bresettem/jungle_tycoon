@@ -2,9 +2,10 @@ class ImagesController < ApplicationController
   def index
     if params[:query].present?
       replace = params[:query].gsub(',', ' ')
-      @images = Image.order(identifier: :asc).global_search(replace)
+      # 54
+      @pagy, @images = pagy(Image.order(identifier: :asc).global_search(replace), items: 54)
     else
-      @images = Image.order(identifier: :asc).first(50)
+      @pagy, @images = pagy(Image.order(identifier: :asc), items: 54)
     end
     # Not too clean but it works!
     if turbo_frame_request?

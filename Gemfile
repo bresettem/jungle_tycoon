@@ -76,3 +76,4 @@ end
 
 gem 'figaro'
 gem 'pg_search'
+gem "pagy", "~> 5.10"
