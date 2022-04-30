@@ -4460,7 +4460,7 @@ urls.each.with_index(1) do |url, index|
     identifier: index,
     url: url,
     thumbnail: thumbnail,
-    ipfs: "ipfs://QmUrsDMQK59ubccRtttriq2nRqK1K1TTKPAfVdjBG7smnd/#{index}.png"
+    ipfs: "https://ipfs.io/ipfs/QmUrsDMQK59ubccRtttriq2nRqK1K1TTKPAfVdjBG7smnd/#{index}.png"
   }
 end
 Image.upsert_all(images)
