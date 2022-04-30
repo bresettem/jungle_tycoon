@@ -26,6 +26,6 @@ footer {
 }
 
 .gallery-item img {
-    width: 200px;
+    /*width: 200px;*/
     padding: 2px;
 }

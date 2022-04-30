@@ -14,11 +14,11 @@
         <i class="fas fa-bars"></i>
       </button>
       <div class="collapse navbar-collapse" id="navbarExample01">
-        <%= link_to 'Jungle Tycoon Images', root_path, class: 'navbar-brand' %>
+        <%= link_to 'Jungle Tycoon Images', root_path, class: 'navbar-brand', data: { turbo: false } %>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <%= form_with(url: images_path, method: :get, class: 'd-flex', data: { controller: "search-form", turbo_frame: "images", turbo_action: 'advance' }) do |f| %>
+        <%= form_with(url: images_path, method: :get, class: 'd-flex', data: { controller: "search-form", turbo_frame: "images" }) do |f| %>
           <%= f.text_field :query, class: 'form-control m2-2', placeholder: 'Search', 'aria-label': 'Search', data: { action: "input->search-form#search" } %>
           <%= f.submit :search, class: 'btn btn-primary me-2' %>
         <% end %>
