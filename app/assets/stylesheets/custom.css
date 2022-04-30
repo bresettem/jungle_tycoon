@@ -13,19 +13,14 @@ footer {
     background-color: #093174;
 }
 
-.gallery-info {
-    text-align: center;
-    display: block;
-    font-size: 12px;
-    opacity: 0.7;
-    font-style: italic;
-}
-
 .header .lead {
     max-width: 620px;
 }
 
 .gallery-item img {
-    /*width: 200px;*/
     padding: 4px;
+}
+
+#query {
+    width: 20rem;
 }

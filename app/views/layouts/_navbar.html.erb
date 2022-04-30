@@ -19,8 +19,12 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <%= form_with(url: images_path, method: :get, class: 'd-flex', data: { controller: "search-form", turbo_frame: "images" }) do |f| %>
-          <%= f.text_field :query, class: 'form-control m2-2', placeholder: 'Search', 'aria-label': 'Search', data: { action: "input->search-form#search" } %>
-          <%= f.submit :search, class: 'btn btn-primary me-2' %>
+          <div class="form-outline">
+            <%= f.text_field :query, id: 'query', class: 'form-control', 'aria-label': 'Search', data: { action: "input->search-form#search" } %>
+            <!--            <input id="search-input" type="search" id="form1" class="form-control"/>-->
+            <%= f.label 'Search', for: 'query', class: 'form-label' %>
+            <!--            <label class="form-label" for="form1">Search</label>-->
+          </div>
         <% end %>
       </div>
     </div>
