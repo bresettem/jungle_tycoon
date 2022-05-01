@@ -9,12 +9,16 @@ window.$ = jquery;
 
 import "@fortawesome/fontawesome-free/js/fontawesome"
 import "@fortawesome/fontawesome-free/js/solid"
+// import 'infinite-scroll/js/core'
 
 // Custom
 import './custom/mdb.min'
-import './custom/lightbox'
+import './custom/lightbox.min'
 
 let popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
 let popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
     return new bootstrap.Popover(popoverTriggerEl)
 })
+$(document).on("turbo:load", function () {
+    console.log("turbo!");
+});
