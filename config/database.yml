@@ -83,5 +83,5 @@ test:
 production:
   <<: *default
   database: jungle_tycoon_production
-  username: jungle_tycoon
-  password: <%= ENV["JUNGLE_TYCOON_DATABASE_PASSWORD"] %>
+  username: <%= ENV['DATABASE_USERNAME']%>
+  password: <%= ENV['DATABASE_PASSWORD']%>
