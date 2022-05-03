@@ -1,8 +1,10 @@
 <div class="row justify-content-center">
   <div class="col col-md-10 text-center">
-    <%= turbo_frame_tag "images" do %>
+    <%= turbo_frame_tag "page_handler" %>
+    <div id="images">
       <%= render images %>
-      <%= render 'shared/pager', pagy: @pagy %>
-    <% end %>
+    </div>
+    <%= render 'shared/pager', pagy: @pagy %>
+
   </div>
 </div>

@@ -1,17 +1,13 @@
 <div id="pager" class="container">
   <div class="row justify-content-between mt-2">
     <div class="col-4">
-      <% if @pagy.prev %>
-        <%= link_to images_path(page: @pagy.prev), class: "btn btn-primary", data: { turbo_action: "advance" } do %>
-          <i class="fa-solid fa-chevron-left"></i> Previous Page
-        <% end %>
-      <% end %>
-    </div>
-    <div class="col-4">
       <div class="d-flex position-relative justify-content-end">
         <% if @pagy.next %>
-          <%= link_to images_path(page: @pagy.next), class: "btn btn-primary", data: { turbo_action: "advance" } do %>
-            Next Page <i class="fa-solid fa-chevron-right"></i>
+          <%= link_to images_path(page: @pagy.next), class: "btn btn-primary", data: {
+            turbo_frame: "page_handler",
+            controller: "autoclick"
+          } do %>
+            Load more images
           <% end %>
         <% end %>
       </div>

@@ -10,7 +10,6 @@ window.$ = jquery;
 import "@fortawesome/fontawesome-free/js/fontawesome"
 import "@fortawesome/fontawesome-free/js/solid"
 // import 'infinite-scroll/js/core'
-
 // Custom
 import './custom/mdb.min'
 import './custom/lightbox.min'
