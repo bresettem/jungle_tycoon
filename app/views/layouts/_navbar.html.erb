@@ -5,12 +5,15 @@
       <%= image_tag 'https://pbs.twimg.com/media/FQ6LYOnXoAAvIBQ.jpg', id: 'brand-img' %>
       Jungle Tycoon Cub (Rugged)
     <% end %>
-    <div class="container-fluid">
-      <%= form_with(url: images_path, method: :get, class: 'd-flex', data: { controller: "search-form", turbo_frame: "images" }) do |f| %>
+    <div class="d-inline-flex">
+      <%= form_with(url: images_path, method: :get, class: 'd-flex', data: { controller: "search-form", turbo_frame: "images", turbo: false }) do |f| %>
         <div class="form-outline">
           <%= f.text_field :query, id: 'query', class: 'form-control', 'aria-label': 'Search', data: { action: "input->search-form#search" } %>
           <%= f.label 'Search', for: 'query', class: 'form-label' %>
         </div>
+      <% end %>
+      <%= link_to 'https://discord.gg/5akKDkva', class: 'text-white text-center', target: '_blank' do %>
+        <h5><i class="fa-brands fa-discord ms-3 mt-3"></i></h5>
       <% end %>
     </div>
   </nav>
