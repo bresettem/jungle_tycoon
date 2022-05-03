@@ -1,7 +1,10 @@
 <header>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <%= link_to 'Jungle Tycoon Cub (Rugged)', root_path, class: 'navbar-brand', data: { turbo: false } %>
+    <%= link_to root_path, class: 'navbar-brand', data: { turbo: false } do %>
+      <%= image_tag 'https://pbs.twimg.com/media/FQ6LYOnXoAAvIBQ.jpg', id: 'brand-img' %>
+      Jungle Tycoon Cub (Rugged)
+    <% end %>
     <div class="container-fluid">
       <%= form_with(url: images_path, method: :get, class: 'd-flex', data: { controller: "search-form", turbo_frame: "images" }) do |f| %>
         <div class="form-outline">

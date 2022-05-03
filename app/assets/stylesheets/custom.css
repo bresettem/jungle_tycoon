@@ -22,5 +22,9 @@ footer {
 }
 
 #query {
-    width: 26rem;
+    width: 20rem;
+}
+
+.navbar-brand img {
+    height: 40px;
 }
