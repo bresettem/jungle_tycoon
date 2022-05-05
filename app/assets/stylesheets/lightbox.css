@@ -63,10 +63,10 @@ body.lb-disable-scrolling {
 
 .lb-cancel {
     display: block;
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
     margin: 0 auto;
-    background: url(https://dl.dropbox.com/s/osbw6zonzlqsfds/loading.gif) no-repeat
+    background: url(https://dl.dropbox.com/s/7t3f6dwilka3ajc/Spinner-1s-48px.gif) no-repeat
 }
 
 .lb-nav {
