@@ -7,9 +7,12 @@
     <% end %>
     <div class="d-inline-flex">
       <%= form_with(url: images_path, method: :get, class: 'd-flex', data: { controller: "search-form", turbo_frame: "images", turbo: false }) do |f| %>
-        <div class="form-outline">
-          <%= f.text_field :query, id: 'query', class: 'form-control', 'aria-label': 'Search', data: { action: "input->search-form#search" } %>
-          <%= f.label 'Search', for: 'query', class: 'form-label' %>
+        <div class="input-group">
+          <div class="form-floating flex-grow-1">
+            <%= f.text_field :query, id: 'query', class: 'form-control', 'aria-label': 'Search', data: { action: "input->search-form#search" } %>
+            <%= f.label 'Search', for: 'query', class: 'form-label' %>
+          </div>
+          <%= button_tag 'Show Royals', id: 'royals', class: 'btn btn-outline-secondary' %>
         </div>
       <% end %>
       <%= link_to 'https://discord.gg/5akKDkva', class: 'text-white text-center', target: '_blank' do %>
