@@ -5,11 +5,19 @@
       <%= image_tag 'https://pbs.twimg.com/media/FQ6LYOnXoAAvIBQ.jpg', id: 'brand-img' %>
       Jungle Tycoon Cub (Rugged)
     <% end %>
+    <!--    <div class="input-group mb-3">-->
+    <!--      <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">-->
+    <!--      <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>-->
+    <!--    </div>-->
     <div class="d-inline-flex">
       <%= form_with(url: images_path, method: :get, class: 'd-flex', data: { controller: "search-form", turbo_frame: "images", turbo: false }) do |f| %>
-        <div class="form-outline">
-          <%= f.text_field :query, id: 'query', class: 'form-control', 'aria-label': 'Search', data: { action: "input->search-form#search" } %>
-          <%= f.label 'Search', for: 'query', class: 'form-label' %>
+        <div class="input-group">
+          <div class="form-floating flex-grow-1">
+            <%= f.text_field :query, id: 'query', class: 'form-control', 'aria-label': 'Search', data: { action: "input->search-form#search" } %>
+            <%= f.label 'Search', for: 'query', class: 'form-label' %>
+          </div>
+          <%= button_tag 'Show Royals', id: 'royals', class: 'btn btn-outline-secondary' %>
+          <!--          <button class="btn btn-outline-secondary" type="button" id="button-addon2">Royals</button>-->
         </div>
       <% end %>
       <%= link_to 'https://discord.gg/5akKDkva', class: 'text-white text-center', target: '_blank' do %>
